@@ -99,7 +99,7 @@ export function MainLayout({
             <SettingsButton />
 
             {/** @slot Sign in button */}
-            <SignInButton />
+            {/* <SignInButton /> */}
 
             {/** @slot Purchase button */}
             <Button
@@ -112,7 +112,7 @@ export function MainLayout({
                 [theme.breakpoints.up(layoutQuery)]: { display: 'inline-flex' },
               })}
             >
-              Purchase
+              Rejoins l’aventure avec YonnKid
             </Button>
           </Box>
         </>

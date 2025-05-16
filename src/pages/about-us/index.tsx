@@ -4,7 +4,7 @@ import { AboutView } from 'src/sections/about/view';
 
 // ----------------------------------------------------------------------
 
-const metadata = { title: `About us - ${CONFIG.appName}` };
+const metadata = { title: `A Propos - ${CONFIG.appName}` };
 
 export default function Page() {
   return (

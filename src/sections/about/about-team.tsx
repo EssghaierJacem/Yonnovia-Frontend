@@ -20,13 +20,13 @@ import { Carousel, useCarousel, CarouselArrowFloatButtons } from 'src/components
 
 export function AboutTeam({ sx, ...other }: BoxProps) {
   const carousel = useCarousel({
-    align: 'start',
+    align: 'center',
     slideSpacing: '24px',
     slidesToShow: {
       xs: 1,
       sm: 2,
-      md: 3,
-      lg: 4,
+      md: 2,
+      lg: 2,
     },
   });
 
@@ -39,20 +39,19 @@ export function AboutTeam({ sx, ...other }: BoxProps) {
       <Container component={MotionViewport} sx={{ textAlign: 'center', py: { xs: 10, md: 15 } }}>
         <m.div variants={varFade('inDown')}>
           <Typography variant="overline" sx={{ color: 'text.disabled' }}>
-            Dream team
+            L'équipe
           </Typography>
         </m.div>
 
         <m.div variants={varFade('inUp')}>
           <Typography variant="h2" sx={{ my: 3 }}>
-            Great team is the key
+            Notre force ?
           </Typography>
         </m.div>
 
         <m.div variants={varFade('inUp')}>
           <Typography sx={{ mx: 'auto', maxWidth: 640, color: 'text.secondary' }}>
-            Minimal will provide you support if you have any problems, our support team will reply
-            within a day and we also have detailed documentation.
+            Une équipe pluridisciplinaire mêlant expertise métier, technique et IA.
           </Typography>
         </m.div>
 
@@ -80,7 +79,7 @@ export function AboutTeam({ sx, ...other }: BoxProps) {
           endIcon={<Iconify icon="eva:arrow-ios-forward-fill" width={24} />}
           sx={{ mx: 'auto' }}
         >
-          All members
+          Tous les membres
         </Button>
       </Container>
     </Box>
@@ -95,7 +94,7 @@ type MemberCardProps = {
 
 function MemberCard({ member }: MemberCardProps) {
   return (
-    <Card>
+    <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
       <Typography variant="subtitle1" sx={{ mt: 2.5, mb: 0.5 }}>
         {member.name}
       </Typography>
@@ -104,7 +103,7 @@ function MemberCard({ member }: MemberCardProps) {
         {member.role}
       </Typography>
 
-      <Box sx={{ px: 1 }}>
+      <Box sx={{ px: 1, flexGrow: 1, display: 'flex', alignItems: 'center' }}>
         <Image alt={member.name} src={member.avatarUrl} ratio="1/1" sx={{ borderRadius: 2 }} />
       </Box>
 

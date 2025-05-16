@@ -3,9 +3,9 @@ import type { BoxProps } from '@mui/material/Box';
 import { m } from 'framer-motion';
 import { varAlpha } from 'minimal-shared/utils';
 
-import Fab from '@mui/material/Fab';
 import Box from '@mui/material/Box';
-import { SvgIcon } from '@mui/material';
+import Stack from '@mui/material/Stack';
+import Divider from '@mui/material/Divider';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
@@ -14,10 +14,41 @@ import { CONFIG } from 'src/global-config';
 import { Image } from 'src/components/image';
 import { Iconify } from 'src/components/iconify';
 import { varFade, MotionViewport } from 'src/components/animate';
+import {
+  Carousel,
+  useCarousel,
+  CarouselDotButtons,
+  carouselBreakpoints,
+  CarouselArrowBasicButtons,
+} from 'src/components/carousel';
 
 // ----------------------------------------------------------------------
 
+const REFERENCES = [
+  { name: "Institut danois des droits de l'homme" },
+  { name: 'ICMPD Malte' },
+  { name: 'ICMPD Jordanie' },
+  { name: 'TI' },
+  { name: 'Banque Mondiale' },
+  { name: 'NCSC' },
+  { name: 'IBF/UE' },
+];
+
 export function AboutVision({ sx, ...other }: BoxProps) {
+  const carousel = useCarousel({
+    align: 'start',
+    slidesToShow: {
+      xs: 1,
+      sm: 2,
+      md: 3,
+    },
+    breakpoints: {
+      [carouselBreakpoints.sm]: { slideSpacing: '24px' },
+      [carouselBreakpoints.md]: { slideSpacing: '40px' },
+      [carouselBreakpoints.lg]: { slideSpacing: '64px' },
+    },
+  });
+
   const renderImage = () => (
     <Image
       src={`${CONFIG.assetsDir}/assets/images/about/vision.webp`}
@@ -33,39 +64,22 @@ export function AboutVision({ sx, ...other }: BoxProps) {
     />
   );
 
-  const renderLogos = () => (
-    <Box
-      component="ul"
+  const horizontalDivider = (position: 'top' | 'bottom') => (
+    <Divider
+      component="div"
       sx={[
-        {
+        (theme) => ({
           width: 1,
-          zIndex: 9,
-          bottom: 0,
-          opacity: 0.48,
-          display: 'flex',
-          flexWrap: 'wrap',
-          alignItems: 'center',
+          opacity: 0.16,
+          height: '1px',
+          border: 'none',
           position: 'absolute',
-          justifyContent: 'center',
-          py: { xs: 1.5, md: 2.5 },
-          '& li': { display: 'inline-flex' },
-        },
+          background: `linear-gradient(to right, transparent 0%, ${theme.vars.palette.grey[500]} 50%, transparent 100%)`,
+          ...(position === 'top' && { top: 0 }),
+          ...(position === 'bottom' && { bottom: 0 }),
+        }),
       ]}
-    >
-      {(['ibm', 'lya', 'spotify', 'netflix', 'hbo', 'amazon'] as const).map((logo) => (
-        <m.li key={logo} variants={varFade('in')}>
-          <SvgIcon
-            sx={{
-              width: 'auto',
-              m: { xs: 1.5, md: 2.5 },
-              height: { xs: 20, md: 32 },
-            }}
-          >
-            {brandLogos[logo]}
-          </SvgIcon>
-        </m.li>
-      ))}
-    </Box>
+    />
   );
 
   return (
@@ -93,31 +107,78 @@ export function AboutVision({ sx, ...other }: BoxProps) {
       <Container component={MotionViewport}>
         <Box
           sx={{
-            mb: 10,
+            mb: 5,
             borderRadius: 2,
-            display: 'flex',
             overflow: 'hidden',
             position: 'relative',
-            alignItems: 'center',
-            justifyContent: 'center',
           }}
         >
           {renderImage()}
-          {renderLogos()}
-
-          <Fab sx={{ position: 'absolute', zIndex: 9 }}>
-            <Iconify icon="solar:play-broken" width={24} />
-          </Fab>
         </Box>
 
         <Typography
           component={m.h6}
           variants={varFade('inUp')}
           variant="h3"
-          sx={{ textAlign: 'center', maxWidth: 800, mx: 'auto' }}
+          sx={{ textAlign: 'center', maxWidth: 800, mx: 'auto', mb: 8 }}
         >
-          Our vision offering the best product nulla vehicula tortor scelerisque ultrices malesuada.
+          Accompagner les professionnels dans l'appropriation de l'IA au service de leurs missions
+          quotidiennes.
         </Typography>
+
+        <Typography
+          component={m.h6}
+          variants={varFade('inUp')}
+          variant="h4"
+          sx={{ textAlign: 'center', mb: 4 }}
+        >
+          Nos Références
+        </Typography>
+
+        <Stack sx={{ position: 'relative', py: { xs: 3, md: 5 } }}>
+          {horizontalDivider('top')}
+
+          <Carousel carousel={carousel}>
+            {REFERENCES.map((reference, index) => (
+              <Stack key={index} component={m.div} variants={varFade('in')}>
+                <Typography
+                  variant="h6"
+                  sx={{
+                    py: 2,
+                    textAlign: 'center',
+                    color: 'text.primary',
+                    transition: (theme) => theme.transitions.create('all'),
+                    '&:hover': {
+                      color: 'primary.main',
+                    },
+                  }}
+                >
+                  {reference.name}
+                </Typography>
+              </Stack>
+            ))}
+          </Carousel>
+
+          <Box
+            sx={{
+              mt: { xs: 3, md: 5 },
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+            }}
+          >
+            <CarouselDotButtons
+              variant="rounded"
+              scrollSnaps={carousel.dots.scrollSnaps}
+              selectedIndex={carousel.dots.selectedIndex}
+              onClickDot={carousel.dots.onClickDot}
+            />
+
+            <CarouselArrowBasicButtons {...carousel.arrows} options={carousel.options} />
+          </Box>
+
+          {horizontalDivider('bottom')}
+        </Stack>
       </Container>
     </Box>
   );

@@ -3,7 +3,7 @@ import type { NavBasicProps } from 'src/components/nav-basic';
 // ----------------------------------------------------------------------
 
 export const demoNavData: NavBasicProps['data'] = [
-  { title: 'Home', path: '/' },
+  { title: 'Accueil', path: '/' },
   { title: 'Components', path: '/components' },
   {
     title: 'Pages',

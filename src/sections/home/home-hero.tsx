@@ -71,15 +71,15 @@ export function HomeHero({ sx, ...other }: BoxProps) {
             fontFamily: theme.typography.fontSecondaryFamily,
             [theme.breakpoints.up(lgKey)]: {
               fontSize: theme.typography.pxToRem(72),
-              lineHeight: '90px',
+              lineHeight: '60px',
             },
           }),
         ]}
       >
         <Box component="span" sx={{ width: 1, opacity: 0.24 }}>
-          Boost your building
+          Mind’z’Kid : L’école des chefs de projets et de
         </Box>
-        process with
+        Entrepreneurs de demain
         <Box
           component={m.span}
           animate={{ backgroundPosition: '200% center' }}
@@ -99,7 +99,7 @@ export function HomeHero({ sx, ...other }: BoxProps) {
             }),
           ]}
         >
-          Minimal
+          Dès aujourd’hui.
         </Box>
       </Box>
     </m.div>
@@ -117,7 +117,7 @@ export function HomeHero({ sx, ...other }: BoxProps) {
           }),
         ]}
       >
-        {`The starting point for your next project is based on MUI. \nEasy customization helps you build apps faster and better.`}
+        {`Yonnovia est une startup française engagée dans la transformation digitale des TPE/PME grâce à l'intelligence artificielle. \nNous croyons que l'IA ne doit pas être un luxe, mais un levier accessible à tous.`}
       </Typography>
     </m.div>
   );
@@ -143,7 +143,7 @@ export function HomeHero({ sx, ...other }: BoxProps) {
             />
           ))}
         </AvatarGroup>
-        160+ Happy customers
+        160+ Clients satisfaits
       </Box>
     </m.div>
   );
@@ -168,7 +168,7 @@ export function HomeHero({ sx, ...other }: BoxProps) {
             startIcon={<Iconify width={24} icon="custom:flash-outline" />}
           >
             <span>
-              Live preview
+              Essayez B-Bot gratuitement
               <Box
                 component="small"
                 sx={[
@@ -194,10 +194,7 @@ export function HomeHero({ sx, ...other }: BoxProps) {
             href={paths.freeUI}
             underline="always"
             sx={{ gap: 0.75, alignItems: 'center', display: 'inline-flex' }}
-          >
-            <Iconify width={16} icon="eva:external-link-fill" />
-            Get free version
-          </Link>
+          ></Link>
         </Stack>
       </m.div>
 
@@ -212,12 +209,12 @@ export function HomeHero({ sx, ...other }: BoxProps) {
           startIcon={<Iconify width={24} icon="solar:figma-outline" />}
           sx={{ borderColor: 'text.primary' }}
         >
-          Figma preview
+          Se former avec formevo.fr
         </Button>
       </m.div>
     </Box>
   );
-
+  /*
   const renderIcons = () => (
     <Stack spacing={3} sx={{ textAlign: 'center' }}>
       <m.div {...motionProps}>
@@ -248,7 +245,7 @@ export function HomeHero({ sx, ...other }: BoxProps) {
       </Box>
     </Stack>
   );
-
+*/
   return (
     <Box
       ref={scrollProgress.elementRef}
@@ -313,7 +310,7 @@ export function HomeHero({ sx, ...other }: BoxProps) {
 
           <m.div style={{ y: y3 }}>{renderRatings()}</m.div>
           <m.div style={{ y: y4 }}>{renderButtons()}</m.div>
-          <m.div style={{ y: y5 }}>{renderIcons()}</m.div>
+          {/* <m.div style={{ y: y5 }}>{renderIcons()}</m.div> */}
         </Container>
 
         <HeroBackground />

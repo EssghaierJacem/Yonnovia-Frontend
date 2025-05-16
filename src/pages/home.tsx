@@ -3,9 +3,9 @@ import { HomeView } from 'src/sections/home/view';
 // ----------------------------------------------------------------------
 
 const metadata = {
-  title: 'Minimals UI: The starting point for your next project',
+  title: "MindzKid - YonnovIA",
   description:
-    'The starting point for your next project with Minimal UI Kit, built on the newest version of Material-UI ©, ready to be customized to your style',
+    "Yonnovia est une startup française engagée dans la transformation digitale des TPE/PME grâce à l'intelligence artificielle. Nous croyons que l'IA ne doit pas être un luxe, mais un levier accessible à tous.",
 };
 
 export default function Page() {

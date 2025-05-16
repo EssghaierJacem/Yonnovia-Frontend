@@ -34,8 +34,8 @@ export function HomeMinimal({ sx, ...other }: BoxProps) {
     <>
       <SectionTitle
         caption="Visualizing Success"
-        title="What's in"
-        txtGradient="Minimal?"
+        title="Sections principales"
+        txtGradient="à intégrer:"
         sx={{ mb: { xs: 5, md: 8 }, textAlign: { xs: 'center', md: 'left' } }}
       />
 
@@ -132,8 +132,8 @@ export function HomeMinimal({ sx, ...other }: BoxProps) {
 
 const ITEMS = [
   {
-    title: 'Branding',
-    description: 'Consistent design makes it easy to brand your own.',
+    title: 'Nos Activités',
+    description: 'Conseil, Formation, Développement de solutions sur mesure pour votre entreprise.',
     icon: (
       <svg
         width="48"
@@ -163,8 +163,9 @@ const ITEMS = [
     ),
   },
   {
-    title: 'UI & UX design',
-    description: 'The kit is built on the principles of the atomic design system.',
+    title: 'Nos Services',
+    description:
+      'Liste complète des services offerts par Yonnovia pour accompagner votre transformation digitale.',
     icon: (
       <svg
         width="48"
@@ -194,8 +195,8 @@ const ITEMS = [
     ),
   },
   {
-    title: 'Development',
-    description: 'Easy to customize and extend, saving you time and money.',
+    title: 'Nos Produits',
+    description: 'Découvrez nos produits innovants avec renvoi vers les sous-domaines spécialisés.',
     icon: (
       <svg
         width="48"

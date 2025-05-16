@@ -30,6 +30,13 @@ const Page403 = lazy(() => import('src/pages/error/403'));
 const Page404 = lazy(() => import('src/pages/error/404'));
 // Blank
 const BlankPage = lazy(() => import('src/pages/blank'));
+// Custom Pages
+const DecouvrePage = lazy(() => import('src/pages/decouvre'));
+const ParcoursKidPreneurPage = lazy(() => import('src/pages/parcours-kid-preneur'));
+const CoachAdazPage = lazy(() => import('src/pages/coach-adaz'));
+const KidMarketPage = lazy(() => import('src/pages/kid-market'));
+const ReseauKidinPage = lazy(() => import('src/pages/reseau-kidin'));
+const KidPayPage = lazy(() => import('src/pages/kid-pay'));
 
 // ----------------------------------------------------------------------
 
@@ -49,9 +56,16 @@ export const mainRoutes: RouteObject[] = [
         ),
         children: [
           { path: 'about-us', element: <AboutPage /> },
-          { path: 'contact-us', element: <ContactPage /> },
+          { path: 'contact', element: <ContactPage /> },
           { path: 'faqs', element: <FaqsPage /> },
           { path: 'blank', element: <BlankPage /> },
+          // Custom routes
+          { path: 'decouvre', element: <DecouvrePage /> },
+          { path: 'parcours-kid-preneur', element: <ParcoursKidPreneurPage /> },
+          { path: 'coach-adaz', element: <CoachAdazPage /> },
+          { path: 'kid-market', element: <KidMarketPage /> },
+          { path: 'reseau-kidin', element: <ReseauKidinPage /> },
+          { path: 'kid-pay', element: <KidPayPage /> },
           {
             path: 'product',
             children: [

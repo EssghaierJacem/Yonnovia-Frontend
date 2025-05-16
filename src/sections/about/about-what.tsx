@@ -74,7 +74,7 @@ export function AboutWhat({ sx, ...other }: BoxProps) {
 
           <Grid size={{ xs: 12, md: 6, lg: 5 }}>
             <Typography component={m.h2} variants={varFade('inRight')} variant="h2" sx={{ mb: 3 }}>
-              What is Minimal?
+              Notre vision?
             </Typography>
 
             <Typography
@@ -89,10 +89,8 @@ export function AboutWhat({ sx, ...other }: BoxProps) {
                 }),
               ]}
             >
-              Our theme is the most advanced and user-friendly theme you will find on the market, we
-              have documentation and video to help set your site really easily, pre-installed demos
-              you can import in one click and everything from the theme options to page content can
-              be edited from the front-end. This is the theme you are looking for.
+              Rendre les entreprises plus efficaces, agiles et connectées grâce à des solutions
+              intelligentes, accessibles et adaptables.
             </Typography>
 
             <Box
@@ -137,7 +135,7 @@ export function AboutWhat({ sx, ...other }: BoxProps) {
               size="large"
               endIcon={<Iconify icon="eva:arrow-ios-forward-fill" />}
             >
-              Our work
+              Notre travail
             </Button>
           </Grid>
         </Grid>
@@ -150,5 +148,5 @@ export function AboutWhat({ sx, ...other }: BoxProps) {
 
 const SKILLS = Array.from({ length: 3 }, (_, index) => ({
   value: [20, 40, 60][index],
-  label: ['Development', 'Design', 'Marketing'][index],
+  label: ['Développement', 'Design', 'Marketing'][index],
 }));

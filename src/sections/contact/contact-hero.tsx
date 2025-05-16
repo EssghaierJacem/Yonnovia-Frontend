@@ -45,7 +45,7 @@ export function ContactHero({ sx, ...other }: BoxProps) {
           <AnimateText
             component="h1"
             variant="h1"
-            textContent={['Where', 'to find us?']}
+            textContent={['Comment', 'nous contacter?']}
             variants={varFade('inUp', { distance: 24 })}
             sx={{
               color: 'common.white',
@@ -92,23 +92,18 @@ export function ContactHero({ sx, ...other }: BoxProps) {
 
 const CONTACTS = [
   {
-    country: 'Bali',
-    address: '508 Bridle Avenue Newnan, GA 30263',
+    country: 'Marseille',
+    address: '37 Rue Guibal, Pôle Média, bureau No.7, Marseille Innovation – 13003',
     phoneNumber: '(239) 555-0108',
   },
   {
-    country: 'London',
-    address: '508 Bridle Avenue Newnan, GA 30263',
+    country: 'Téléphone',
+    address: '+33 6 13 80 25 35',
     phoneNumber: '(319) 555-0115',
   },
   {
-    country: 'Prague',
-    address: '508 Bridle Avenue Newnan, GA 30263',
+    country: 'Email',
+    address: 'support@mindzkid.ai',
     phoneNumber: '(252) 555-0126',
-  },
-  {
-    country: 'Moscow',
-    address: '508 Bridle',
-    phoneNumber: '(307) 555-0133',
   },
 ];

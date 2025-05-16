@@ -1,13 +1,9 @@
 import { _mock } from './_mock';
+import { customMembers } from './_carouselMembers';
 
 // ----------------------------------------------------------------------
 
-export const _carouselsMembers = Array.from({ length: 6 }, (_, index) => ({
-  id: _mock.id(index),
-  name: _mock.fullName(index),
-  role: _mock.role(index),
-  avatarUrl: _mock.image.portrait(index),
-}));
+export const _carouselsMembers = customMembers;
 
 // ----------------------------------------------------------------------
 
@@ -175,45 +171,45 @@ export const _pricingPlans = [
 
 export const _testimonials = [
   {
-    name: _mock.fullName(1),
+    name: 'Sophie Laurent',
     postedDate: _mock.time(1),
-    ratingNumber: _mock.number.rating(1),
+    ratingNumber: 5,
     avatarUrl: _mock.image.avatar(1),
-    content: `Excellent Work! Thanks a lot!`,
+    content: `Les solutions d'IA proposées par l'équipe ont transformé notre processus de gestion client. Impeccable !`,
   },
   {
-    name: _mock.fullName(2),
+    name: 'Thomas Moreau',
     postedDate: _mock.time(2),
-    ratingNumber: _mock.number.rating(2),
+    ratingNumber: 5,
     avatarUrl: _mock.image.avatar(2),
-    content: `It's a very good dashboard and we are really liking the product . We've done some things, like migrate to TS and implementing a react useContext api, to fit our job methodology but the product is one of the best in terms of design and application architecture. The team did a really good job.`,
+    content: `Nous avons adopté leurs outils d'IA dans notre département financier il y a 6 mois. L'interface est intuitive et l'équipe a parfaitement adapté la solution à nos besoins spécifiques. Notre productivité a augmenté de 30%, et les analyses sont bien plus précises qu'auparavant.`,
   },
   {
-    name: _mock.fullName(3),
+    name: 'Marie Dubois',
     postedDate: _mock.time(3),
-    ratingNumber: _mock.number.rating(3),
+    ratingNumber: 4.5,
     avatarUrl: _mock.image.avatar(3),
-    content: `Customer support is realy fast and helpful the desgin of this theme is looks amazing also the code is very clean and readble realy good job !`,
+    content: `Le support client est réactif et professionnel. La solution s'est intégrée parfaitement à notre système existant, un vrai gain de temps pour nos équipes !`,
   },
   {
-    name: _mock.fullName(4),
+    name: 'Jean-Philippe Martin',
     postedDate: _mock.time(4),
-    ratingNumber: _mock.number.rating(4),
+    ratingNumber: 5,
     avatarUrl: _mock.image.avatar(4),
-    content: `Amazing, really good code quality and gives you a lot of examples for implementations.`,
+    content: `Étonnant comment ils ont réussi à simplifier des concepts d'IA complexes. Nos collaborateurs, même les moins technophiles, utilisent les outils quotidiennement.`,
   },
   {
-    name: _mock.fullName(5),
+    name: 'Camille Bernard',
     postedDate: _mock.time(5),
-    ratingNumber: _mock.number.rating(5),
+    ratingNumber: 4.8,
     avatarUrl: _mock.image.avatar(5),
-    content: `Got a few questions after purchasing the product. The owner responded very fast and very helpfull. Overall the code is excellent and works very good. 5/5 stars!`,
+    content: `Notre transition vers l'IA semblait intimidante, mais leur accompagnement a rendu tout le processus fluide. Les résultats ont dépassé nos attentes et nous continuons d'explorer de nouvelles fonctionnalités.`,
   },
   {
-    name: _mock.fullName(6),
+    name: 'Alexandre Petit',
     postedDate: _mock.time(6),
-    ratingNumber: _mock.number.rating(6),
+    ratingNumber: 5,
     avatarUrl: _mock.image.avatar(6),
-    content: `CEO of Codealy.io here. We’ve built a developer assessment platform that makes sense - tasks are based on git repositories and run in virtual machines. We automate the pain points - storing candidates code, running it and sharing test results with the whole team, remotely. Bought this template as we need to provide an awesome dashboard for our early customers. I am super happy with purchase. The code is just as good as the design. Thanks!`,
+    content: `Directeur d'une PME dans l'industrie, j'étais sceptique quant à l'utilité de l'IA pour notre activité. Leur approche sur mesure a complètement changé ma vision. Nos processus de maintenance prédictive sont désormais optimisés, réduisant nos coûts opérationnels de 20%. Un investissement qui s'est rapidement rentabilisé.`,
   },
 ];

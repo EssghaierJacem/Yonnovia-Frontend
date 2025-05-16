@@ -14,6 +14,8 @@ import { HomeIntegrations } from '../home-integrations';
 import { HomeAdvertisement } from '../home-advertisement';
 import { HomeHugePackElements } from '../home-hugepack-elements';
 import { HomeHighlightFeatures } from '../home-highlight-features';
+import { HomeEnterpriseSolutions } from '../home-enterprise-solutions';
+import { ParcoursComparison } from 'src/sections/parcours/parcours-comparison';
 
 // ----------------------------------------------------------------------
 
@@ -35,23 +37,26 @@ export function HomeView() {
       <HomeHero />
 
       <Stack sx={{ position: 'relative', bgcolor: 'background.default' }}>
-        <HomeMinimal />
+        {/* <HomeMinimal /> */}
 
-        <HomeHugePackElements />
+        {/* <HomeHugePackElements /> */}
 
-        <HomeForDesigner />
+        {/* <HomeForDesigner /> */}
 
-        <HomeHighlightFeatures />
+        {/* <HomeHighlightFeatures /> */}
 
         <HomeIntegrations />
 
-        <HomePricing />
+        {/* <HomePricing /> */}
+        <ParcoursComparison />
 
         <HomeTestimonials />
 
         <HomeFAQs />
 
-        <HomeZoneUI />
+        {/* <HomeZoneUI /> */}
+
+        <HomeEnterpriseSolutions />
 
         <HomeAdvertisement />
       </Stack>

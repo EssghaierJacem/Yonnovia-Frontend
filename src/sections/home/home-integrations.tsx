@@ -45,21 +45,24 @@ const renderLines = () => (
 export function HomeIntegrations({ sx, ...other }: BoxProps) {
   const renderDescription = () => (
     <SectionTitle
-      caption="Integrations"
-      title="Robust integration"
-      txtGradient="framework"
+      caption="Mind’z’Kid"
+      title="Un cadre inspirant pour les jeunes esprits"
+      txtGradient="d'apprentissage innovant"
       description={
         <>
           <Box component="span" sx={{ mb: 1, display: 'block' }}>
-            A comprehensive suite of integrations offers diverse functionalities.
+            Mind’z’Kid est une plateforme innovante conçue pour initier les enfants de 5 à 18 ans à
+            la gestion de projet, à l’entrepreneuriat et à l’éducation financière, à travers un
+            parcours ludique, interactif et inclusif. Guidés par leur avatar YonnKid et coachés par
+            ADA’Z, les enfants développent leurs idées et créent de vrais projets en équipe ou
+            individuellement.
           </Box>
 
           <Box
             component="span"
             sx={{ fontStyle: 'italic', color: 'text.disabled', typography: 'caption' }}
           >
-            * Only includes authentication methods.
-            <br />* Database not included.
+            <br />
           </Box>
         </>
       }

@@ -11,8 +11,9 @@ export function ContactForm({ sx, ...other }: BoxProps) {
   return (
     <Box sx={sx} {...other}>
       <Typography variant="h3">
-        Feel free to contact us. <br />
-        We&apos;ll be glad to hear from you buddy.
+        N'hésitez pas à nous contacter.
+        <br />
+        Nous serons ravis d'avoir de tes nouvelles.
       </Typography>
       <Box
         sx={{
@@ -22,14 +23,14 @@ export function ContactForm({ sx, ...other }: BoxProps) {
           flexDirection: 'column',
         }}
       >
-        <TextField fullWidth label="Name" />
+        <TextField fullWidth label="Nom" />
         <TextField fullWidth label="Email" />
-        <TextField fullWidth label="Subject" />
-        <TextField fullWidth label="Enter your message here." multiline rows={4} />
+        <TextField fullWidth label="Sujet" />
+        <TextField fullWidth label="Entrez votre message ici." multiline rows={4} />
       </Box>
 
       <Button size="large" variant="contained">
-        Submit
+        Soumettre
       </Button>
     </Box>
   );

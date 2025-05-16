@@ -21,21 +21,21 @@ import { Iconify } from 'src/components/iconify';
 
 const LINKS = [
   {
-    headline: 'Minimal',
+    headline: 'Projets en cours :',
     children: [
-      { name: 'About us', href: paths.about },
-      { name: 'Contact us', href: paths.contact },
-      { name: 'FAQs', href: paths.faqs },
+      { name: 'E-Audit : Repenser l’audit interne avec IA', href: paths.about },
+      { name: 'Chatbot intelligent pour la conformité réglementaire', href: paths.contact },
+      { name: 'LMS pour formation continue IA & digitalisation ', href: paths.faqs },
     ],
   },
   {
-    headline: 'Legal',
+    headline: 'Légal',
     children: [
-      { name: 'Terms and condition', href: '#' },
-      { name: 'Privacy policy', href: '#' },
+      { name: 'Mentions légales', href: '#' },
+      { name: 'Politique de confidentialité', href: '#' },
     ],
   },
-  { headline: 'Contact', children: [{ name: 'support@minimals.cc', href: '#' }] },
+  { headline: 'Contact', children: [{ name: 'support@mindzkid.ai', href: '#' }] },
 ];
 
 // ----------------------------------------------------------------------
@@ -85,8 +85,11 @@ export function Footer({
                 [theme.breakpoints.up(layoutQuery)]: { mx: 'unset' },
               })}
             >
-              The starting point for your next project with Minimal UI Kit, built on the newest
-              version of Material-UI ©, ready to be customized to your style.
+              Yonnovia est une startup française engagée dans la transformation digitale des TPE/PME
+              grâce à l’intelligence artificielle. Nous croyons que l’IA ne doit pas être un luxe,
+              mais un levier accessible à tous.
+              <br /> &nbsp;
+              <br /> Retour à <Link href="https://minimals.cc/"> yonnovia.ia </Link>
             </Typography>
 
             <Box
@@ -152,7 +155,7 @@ export function Footer({
         </Grid>
 
         <Typography variant="body2" sx={{ mt: 10 }}>
-          © All rights reserved.
+          © Tous droits réservés.
         </Typography>
       </Container>
     </FooterRoot>
@@ -175,11 +178,7 @@ export function HomeFooter({ sx, ...other }: FooterProps) {
     >
       <Container>
         <Logo />
-        <Box sx={{ mt: 1, typography: 'caption' }}>
-          © All rights reserved.
-          <br /> made by
-          <Link href="https://minimals.cc/"> minimals.cc </Link>
-        </Box>
+        <Box sx={{ mt: 1, typography: 'caption' }}>© Tous droits réservés.</Box>
       </Container>
     </FooterRoot>
   );
